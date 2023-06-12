@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.warpper{
+    display: inline-flex;
+}
+
+.warpper .static-text{
+    color: #111827;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.warpper .dynamic-text{
+
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+.warpper .dynamic-text2{
+
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+.dynamic-text li{
+    list-style: none;
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(4) infinite;
+}
+.dynamic-text2 li{
+    list-style: none;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(4) infinite;
+}
+
+
+@keyframes slide{
+    100%{
+       top: -360px;
+    }
+}
+
+
+.dynamic-text li span{
+    position: relative;
+}
+
+.dynamic-text2 li span{
+    position: relative;
+}
+
+
+.dynamic-text li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    height: 100%;
+    width: 100%;
+    background-color: #F3F4F6;
+    border-left: 4px solid #000;
+    animation: typing 1.5s steps(10) infinite;
+}
+
+.dynamic-text2 li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    border-left: 4px solid #000;
+    animation: typing 1.5s steps(10) infinite;
+}
+
+form
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+
+@keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+.read_more
+    {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+  
+  figure {
+      margin: 0 0 1.3rem 0;
+      -webkit-transition: .125s linear;
+      -moz-transition: .125s linear;
+      -ms-transition: .125s linear;
+      -o-transition: .125s linear;
+      transition: .125s linear;
+  }
+
+  p { margin-bottom: 1.3rem }
+ 
+  article {
+      margin-bottom: 3rem;
+      position: relative;
+      *zoom: 1;
+  }
+  
+  article:before, article:after {
+      content: "";
+      display: table;
+  }
+  
+  article:after { clear: both }
+  
+  article figure {
+      float: left;
+      width: 32.5%;
+  }
+  
+  article section:first-of-type {
+      float: right;
+      width: 62.5%;
+  }
+  
+  article section:last-of-type {
+      display: none;
+      visibility: hidden;
+  }
+  
+  section {
+      -webkit-transition: .125s linear;
+      -moz-transition: .125s linear;
+      -ms-transition: .125s linear;
+      -o-transition: .125s linear;
+      transition: .125s linear;
+  }
+  
+  input[type=checkbox] {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+  }
+  
+  [for="read_more"] {
+      position: absolute;
+      bottom: -3rem;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      padding: .65rem;
+      box-shadow: inset 1px 1px rgba(0, 0, 0, 0.1), inset -1px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  [for="read_more"]:hover {
+      background: rgba(0,0,0,.5);
+      color: rgb(255,255,255);
+  }
+  
+  [for="read_more"] span:last-of-type {
+      display: none;
+      visibility: hidden;
+  }
+  
+  input[type=checkbox]:checked ~ section {
+      display: block;
+      visibility: visible;
+      width: 100%;
+  }
+  
+  input[type=checkbox]:checked ~ figure { width: 100% }
+  
+  input[type=checkbox]:checked ~ [for="read_more"] span:first-of-type {
+      display: none;
+      visibility: hidden;
+  }
+  
+  input[type=checkbox]:checked ~ [for="read_more"] span:last-of-type {
+      display: block;
+      visibility: visible;
+  }
