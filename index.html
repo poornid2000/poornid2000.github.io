@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -136,19 +136,20 @@
           </div>
           </div>
         </div>
+
       <p class="text-gray-900 -mt-10 text-xl pt-4 md:mr-28 justify"> 
-        <form id="myForm">
+        <form id="myForm" action="MY.php" method="POST">
           <div>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
           </div>
           <div>
-            <label for="telephone">Telephone:</label>
-            <input type="tel" id="telephone" name="telephone" required>
-          </div>
-          <div>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+          </div>
+          <div>
+            <label for="telephone">Telephone:</label>
+            <input type="tel" id="telephone" name="telephone" required>
           </div>
           <div>
             <label for="address">Address:</label>
@@ -170,8 +171,8 @@
   <script>
     document.getElementById("myForm").addEventListener("submit", function(event) {
   var nameInput = document.getElementById("name");
-  var telephoneInput = document.getElementById("telephone");
   var emailInput = document.getElementById("email");
+  var telephoneInput = document.getElementById("telephone");
   var addressInput = document.getElementById("address");
   
   if (!nameInput.checkValidity()) {
@@ -180,14 +181,13 @@
     return false;
   }
   
-  if (!telephoneInput.checkValidity()) {
-    alert("Please enter a valid telephone number.");
+  if (!emailInput.checkValidity()) {
+    alert("Please enter a valid email address.");
     event.preventDefault();
     return false;
   }
-  
-  if (!emailInput.checkValidity()) {
-    alert("Please enter a valid email address.");
+  if (!telephoneInput.checkValidity()) {
+    alert("Please enter a valid telephone number.");
     event.preventDefault();
     return false;
   }
